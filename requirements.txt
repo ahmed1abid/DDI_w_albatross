@@ -1,0 +1,7 @@
+pyyaml
+truffle
+requests 
+pinatapy-vourhey
+load_dotenv
+aiohttp
+web3

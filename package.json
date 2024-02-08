@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "ganache": "^7.9.2",
+    "geth": "^0.4.0",
+    "latest-version": "^7.0.0",
+    "node": "^8.15.0",
+    "solc": "^0.8.23",
+    "truffle": "^5.11.5",
+    "web3": "^4.3.0"
+  }
+}
