@@ -1,77 +1,83 @@
 # Decentralized Identity Management System (DDI) with Albatross
 
-This Decentralized Identity Management System (DDI) leverages the Albatross framework for managing certificates and interactions between users, issuers, and servers on the Ethereum blockchain.
+The Decentralized Identity Management System (DDI) utilizes the Albatross framework to manage certificates and interactions among users, issuers, and servers on the Ethereum blockchain.
 
 ## Setup and Installation
 
-**version used :** 
-Truffle v5.11.5 (core: 5.11.5)
-Ganache v7.9.1
-Solidity - 0.8.23 (solc-js)
-Node v16.17.0
-Web3.js v1.10.0
-
+### Dependencies:
+- Truffle v5.11.5
+- Ganache v7.9.1
+- Solidity - 0.8.23 (solc-js)
+- Node v16.17.0
+- Web3.js v1.10.0
 
 1. **Clone the Repository**: 
-   ```
+   ```bash
    git clone https://github.com/your_username/DDI_w_albatross.git
+   ```
 
-    Install Dependencies:
+2. **Install Dependencies and Build**:
+   ```bash
+   cd DDI_w_albatross
+   make build
+   pip3 install -requitements.txt
+   ```
 
-    
+3. **Start Ganache**:
+   ```bash
+   make start-ganache
+   ```
 
-cd DDI_w_albatross
-make build
+4. **Compile and Migrate Smart Contracts**:
+   ```bash
+   truffle migrate
+   ```
 
-### Start Ganache:
+## User CLI
 
-make start-ganache
-
-**Compile and Migrate Smart Contracts:**
-
-    truffle migrate
-
-# User CLI
-
-To use the user command line interface (CLI), execute:
-
+The User Command Line Interface (CLI) provides commands for managing user accounts and virtual machines.
 
 ### Initialize User Account:
-
-    
-
-#### DIMS> init user
-
+```bash
+python3 cli_sol2.py
+DIMS> init user
+```
 Follow the prompts to initialize the user account.
 
 ### Create VM:
-
-#### DIMS> create user
-
+```bash
+DIMS> create vm
+```
 
 ### Sign VM:
-
-#### DIMS> sign vm
+```bash
+DIMS> sign vm
+```
 
 ### Destroy VM:
+```bash
+DIMS> destroy vm
+```
 
+### Debug Mode:
+To enable debug mode, add `--debug` as an argument:
+```bash
+DIMS> sign vm --debug
+```
 
+## Listener
 
-#### DIMS> destroy vm
+To run the listener, execute:
+```bash
+python3 blocklistener.py
+```
 
+## Documentation
 
-# Listener:
+Refer to the provided documentation for setting up the Albatross environment and configuring the network setup. Ensure proper configuration of Ganache and the Albatross environment before executing commands. Review and update the provided commands and configurations based on your specific setup and requirements. Ensure that you run the listener too.
 
-run the cmd :
-  **python3 blocklistener.py**
+## Additional Notes
 
-
-# Documentation
-
-Refer to the provided documentation for setting up the Albatross environment and configuring the network setup.
-**github albatross**
-Additional Notes
-
-    Ensure proper configuration of Ganache and the Albatross environment before executing commands.
-    Review and update the provided commands and configurations based on your specific setup and requirements.
-    Ensure that you run the listener too
+- Make sure to configure Ganache and the Albatross environment properly before executing any commands.
+- Review and update the provided commands and configurations according to your specific setup and requirements.
+- Ensure that the listener is also running to monitor blockchain events and transactions effectively.
